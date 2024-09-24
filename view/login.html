@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Iniciar Sesión</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../img/logo.png">
+        <p class="nombreColegio">Colegio Internacional Los PIO</p>
+    </header>
+    <nav><a href="./index.html">Inicio</a>
+        <a href="./login.html" class="active">Iniciar Sesión</a>
+        <a href="./contactenos.html">Contáctenos</a>
+    </nav>
+    <form id="container" action="#" method="post">
+        <label class="labLogin" for="text">Iniciar Sesión </label>
+        <label class="label">
+            <input type="email" class="input" name="name" placeholder=" " required>
+            <span class="label__name">correo electrónico</span>
+        </label>
+        <label class="label">
+            <input type="password" class="input" placeholder=" " required>
+            <span class="label__name">contraseña</span>
+        </label>
+        <button class="button" type="submit" name="Ingresar">Ingresar</button>
+        <a href="" class="forgotPassword">¿Olvidaste la contraseña?</a>
+        <p class="signUp">¿Aún no tienes una cuenta?
+            <a role="button" href=""> Regístrate</a></p>
+    </form>
+</body>
+
+</html>

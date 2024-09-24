@@ -1,0 +1,178 @@
+body {
+    font-family: "Roboto Condensed", system-ui;
+    background: #E1E6F9;
+    display: grid;
+    color: #000;
+    overflow: auto;
+    margin: 0 10px;
+    max-width: 1170px; /*Ajustar a auto para full-screen*/
+    min-height: 100vh;
+    gap: 0.2rem;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 50px 1fr 500px 80px;
+    grid-template-areas: "my-header my-header my-header"
+        "my-nav my-nav my-nav"
+        "my-aside my-aside my-aside"
+        "my-section my-section my-section"
+        "my-footer my-footer my-footer";
+}
+
+header {
+    display: grid;
+    grid-area: my-header;
+    background-color: blue;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    margin: 0 10px;
+    max-width: 1170px;
+    min-height: 100vh;
+}
+
+.logo {
+    position: relative;
+    object-fit: cover;
+    width: 80px;
+    left: 40px;
+}
+
+.nombreColegio {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000;
+}
+
+nav {
+    grid-area: my-nav;
+    background-color: cornflowerblue;
+    display: grid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;    
+}
+
+nav a {
+    align-content: center;
+    font-weight: bold;
+    grid-row: 1 / 3;
+    text-align: center;
+    text-decoration: none;    
+}
+
+nav a.active {
+    background-color: rgb(0, 0, 155);
+    color: #fff;
+    border-bottom-left-radius: 10px;
+}
+
+aside {
+    display: grid;
+    grid-area: my-aside;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: 200px 200px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.imagen_1, .imagen_2, .imagen_3, .imagen_4, .imagen_5, .imagen_6, .imagen_7, .imagen_8, .imagen_9 {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen_2 {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+
+.imagen_7 {
+    grid-column: 2 / 4;
+}
+
+.imagen_8 {
+    grid-column: 1 / 3;
+}
+
+section {
+    display: grid;
+    grid-area: my-section;
+    grid-template-columns: 200px 200px 1fr;
+    grid-template-rows: 500px;
+    gap: 15px;
+}
+
+.mision, .vision, .historia {
+    display: grid;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section h1 {   
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+section p, section ol, section ul {
+    padding: 0 10px 0 10px;
+    text-align: justify;
+}
+
+footer {
+    grid-area: my-footer;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 700px repeat(5, 50px);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.copyright {
+    font-size: large;
+    color: #fff;
+}
+
+.fa-brands {
+    font-size: 3rem;
+    color: #fff;
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    main {
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 150px 100px 1fr 100px;
+        grid-template-areas: "my-header my-header my-header"
+            "my-nav my-nav my-nav"
+            "my-aside my-section my-section"
+            "my-footer my-footer my-footer";
+    }
+}
+
+@media (min-width: 1001px) {
+    main {
+      grid-template-columns: 200px 1fr 200px;
+      grid-template-rows: 200px
+        1fr
+        100px;
+      grid-template-areas:
+        "my-header my-header my-header"
+        "my-nav my-section my-aside"
+        "my-footer my-footer my-footer"
+    }
+}

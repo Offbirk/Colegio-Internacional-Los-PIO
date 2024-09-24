@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/contactUs.css">
+    <script src="https://kit.fontawesome.com/fcc29d9259.js" crossorigin="anonymous"></script>
+    <title>Contáctenos</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../img/logo.png">
+        <p class="nombreColegio">Colegio Internacional Los PIO</p>
+    </header>
+    <nav><a href="./index.html">Inicio</a>
+        <a href="./login.html">Iniciar Sesión</a>
+        <a href="./contactenos.html" class="active">Contáctenos</a>
+    </nav>
+    <div id="title">
+        <span class="title">Contáctenos</span>
+        <i class="fa-solid fa-headset"></i>
+    </div>
+    <form class="form" action="#" method="post">
+        <label class="label">
+            <input type="text" placeholder=" " class="input" required>
+            <span class="label__name">Nombre del contacto<span>
+        </label>
+        <label class="label">
+            <input type="email" placeholder=" " class="input" required>
+            <span class="label__name">Correo electrónico<span>
+        </label>
+        <div class="asunto">
+            <label for="text">Asunto a tratar: </label>
+            <select id="subject" name="subject" class="input" required>
+                <option value="0">Elija una opción</option>
+                <option value="1">Ingreso Nuevos Estudiantes</option>
+                <option value="2">Matriculas</option>
+                <option value="3">Reingresos</option>
+                <option value="4">Reportes de Notas</option>
+                <option value="5">Retiro de la Institución</option>
+            </select>
+        </div>
+        <label class="label">
+            <textarea placeholder=" " class="textarea" required></textarea>
+            <span class="label__name">Escriba un mensaje descriptivo<span>
+        </label>
+        <button type="submit" class="button">Enviar</button>
+    </form>
+</body>
+
+</html>
