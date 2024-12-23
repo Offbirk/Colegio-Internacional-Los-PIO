@@ -100,26 +100,89 @@ footer {
     color: #fff;
 }
 
-@media (min-width: 600px) and (max-width: 1000px) {
-    main {
-        grid-template-columns: 200px 1fr 200px;
-        grid-template-rows: 150px 100px 1fr 100px;
-        grid-template-areas: "my-header my-header my-header"
-            "my-nav my-nav my-nav"
-            "my-aside my-section my-section"
-            "my-footer my-footer my-footer";
+
+@media (max-width: 768px) {
+    body {
+        grid-template-rows: 80px 40px 1fr 80px;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logo {
+        width: 60px;
+        justify-self: flex-start;
+    }
+
+    .nombreColegio {
+        margin-bottom: 5rem;
+        font-size: 1.5rem;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 5px;
+    }
+
+    .fa-brands {
+        font-size: 1.5rem;
     }
 }
 
-@media (min-width: 1001px) {
-    main {
-      grid-template-columns: 200px 1fr 200px;
-      grid-template-rows: 200px
-        1fr
-        100px;
-      grid-template-areas:
-        "my-header my-header my-header"
-        "my-nav my-section my-aside"
-        "my-footer my-footer my-footer"
+@media (max-width: 480px) {
+    body {
+        grid-template-rows: 70px 40px 1fr 60px;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 1rem;
+        width: 10%;
+    }
+
+    .nombreColegio {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 1rem;
+        height: auto;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        grid-area: auto;
+        text-align: center;        
+        display: grid;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 5px;
+        height: 100%;
+    }
+
+    .fa-brands {
+        font-size: 1.2rem;
     }
 }

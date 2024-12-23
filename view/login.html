@@ -4,30 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <title>Colegio Los PIO  | Inicio de Sesión</title>
 </head>
 
 <body>
-    <form id="container" action="#" method="post">
-        <label class="labLogin" for="text">Iniciar Sesión </label>
-        <label class="label">
-            <input type="email" class="input" name="name" placeholder=" " required>
-            <span class="label__name">correo electrónico</span>
-        </label>
-        <label class="label">
-            <input type="password" class="input" placeholder=" " required>
-            <span class="label__name">contraseña</span>
-        </label>
-        <button class="button" type="submit" name="Ingresar">Ingresar</button>
-        <a href="" class="forgotPassword">¿Olvidaste la contraseña?</a>
-        <p class="signUp">¿Aún no tienes una cuenta?
-            <a role="button" href=""> Regístrate</a></p>
-    </form>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+          <form>
+            <h1>Registrarse</h1>
+            <div class="social-icons">
+              <a href="https://www.x.com" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.github.com" class="icon"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <span>o usa tu Correo Electronico para registrarte</span>
+            <input type="text" placeholder="Nombre" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in">
+          <form>
+            <h1>Iniciar Sesión</h1>
+            <div class="social-icons">
+              <a href="https://www.x.com" class="icon"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.github.com" class="icon"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <span>o usa tu correo electrónico y contraseña</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <button>Iniciar sesión</button>
+          </form>
+        </div>
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Bienvenido de vuelta!</h1>
+              <p>Ingresa tus datos personales para usar todas las funciones del sitio.</p>
+              <button class="hidden" id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+              <h1>Hola! Querido usuario</h1>
+              <p>
+                Regístrate con tus datos personales para usar todas las funciones del sitio.
+              </p>
+              <button class="hidden" id="register">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <script src="../js/login.js"></script>
 </body>
 
 </html>
