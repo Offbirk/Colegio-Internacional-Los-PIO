@@ -1,17 +1,28 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 body {
+    display: grid;
+    grid-template-areas: "title"
+                         "form";
 	font-family: "Plus Jakarta Sans", sans-serif;
+    width: 300px;
+    margin: 0 auto;
+    height: min-content;
+
+    @media (min-width: 600px) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.form {
-    display: flexbox;
-}
 
 #title {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-area: title;
+    grid-template-rows: 1fr;
     position: relative;
     justify-content: center;
 }
@@ -33,26 +44,37 @@ body {
     padding: .5rem;
 }
 
+#form {
+    display: grid;
+    grid-area: form;    
+}
+
 .label {
+    display: grid;
 	width: max-content;
     margin: 30px auto;    
-    display: grid;
     grid-template-areas: "input";
 }
 
 .input, .textarea {
 	grid-area: input;
-    width: 380px;
+    width: 250px;
     font: inherit;
     border-radius: 10px;
     border: 1px solid gray;
     padding: .7rem 1.5rem;
-}
 
-.textarea {
-    min-width: 400px;
-    max-width: 400px;
-    max-height: 100px;
+    @media (min-width: 1001px) {
+        .input {
+            width: 400px;
+        }
+
+        .textarea {
+            max-width: 400px;
+            min-width: 400px;
+            max-height: 100px;
+        }
+    }
 }
 
 .label__name {
@@ -83,15 +105,29 @@ body {
 }
 
 .asunto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    position: relative;
+    grid-template-columns: 100%;
+    grid-template-rows: 20px 40px;   
+    justify-items: center;
+}
+
+.asunto__text {
+    position: absolute;
+    width: 200px;
+    text-align: center;
+}
+
+#subject {
+    display: grid;
+    position: absolute;
+    justify-items: center;
+    margin: 1.5rem auto;
 }
 
 .button {
     display: grid;
-    grid-area: input;
+    position: relative;
     width: 80px;
     font: inherit;
     border-radius: 10px;
